@@ -1,0 +1,293 @@
+body {
+    padding: 0;
+    overflow: hidden;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.map {
+    position: absolute;
+    right: 0px;
+    left: 340px;
+    height: 100%;
+    top: 0;
+}
+
+@font-face {
+  font-family: 'Champion';
+  src: url('Champion Shipmate.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1.Web_Head {
+  font-family: "Champion", bold, normal;
+  font-size: 60px;
+}
+h2.Inspection_Year {
+  font-family: "Champion", bold, normal;
+  font-size: 30px;
+}
+h3.Narratives {
+  font-size: 20px;
+}
+
+.Selector {
+  position:absolute;
+  top: 60px;
+  left: 15px;
+  width: auto;
+}
+
+.RiskFilter {
+  font-family: "Champion", bold, normal;
+  font-size: 30px;
+}
+
+.dropdown {
+  font-family: "Champion", bold, normal;
+  font-size: 30px;
+}
+
+.InsYear {
+  font-family: "Champion", bold, normal;
+  font-size: 30px;
+  position: absolute;
+  top: 189px;
+  right: 20px;
+}
+
+.ShowInfo {
+  position: absolute;
+  top: 189px;
+  left: 15px;
+  background-color: #ffffff;
+  border-width: thick;
+  border-color:#95a5a6;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-color: blue;
+}
+
+.SideBar_Info {
+  position: relative;
+  width: auto;
+  left: 10px;
+  right: 20px;
+  top: auto;
+  bottom: auto;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: transparent;
+  grid-gap: 5px;
+  opacity: 0.85;
+  padding: 10px;
+}
+
+.ButtonMap {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background-color: #ffffff;
+  border-width: thick;
+  border-color:#95a5a6;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-color: blue;
+}
+
+.ButtonClassify {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  background-color: #ffffff;
+  border-width: thick;
+  border-color:#95a5a6;
+  border-radius: 5px;
+  font-style: normal;;
+  font-weight: bold;
+  font-color: blue;
+}
+
+.DisplayRe {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background-color: #ffffff;
+  border-width: thick;
+  border-color:#95a5a6;
+  border-radius: 5px;
+  font-style: normal;;
+  font-weight: bold;
+  font-color: blue;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0px;
+    width: 340px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 20px;
+    background-image: url(sidebar1.png);
+}
+
+.upper_sidebar {
+    position: absolute;
+    left: 0px;
+    width: 340px;
+    top: 0px;
+    bottom: auto;
+    height: 350px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.lower_sidebar {
+    position: absolute;
+    left: 0px;
+    width: 340px;
+    top: auto;
+    bottom: 0px;
+    height: 350px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.hide {
+  position: absolute;;
+  left:6px;
+  top: 80px;
+  width: 36px;
+  height: 33px;
+  z-index: 1000;
+  background-image: url(veye.png);
+  background-color: white;
+}
+
+.reset {
+  position: absolute;;
+  left:6px;
+  top: 128px;
+  width: 36px;
+  height: 35px;
+  z-index: 1000;
+  background-image: url(reset.png);
+  background-color: white;
+}
+
+.DrawRect {
+  position: absolute;;
+  left:6px;
+  top: 176px;
+  width: 36px;
+  height: 35px;
+  z-index: 1000;
+  background-color: white;
+}
+
+.RemoveRect {
+  position: absolute;;
+  left:6px;
+  top: 224px;
+  width: 36px;
+  height: 35px;
+  z-index: 1000;
+  background-color: white;
+}
+
+.previous {
+  position: absolute;;
+  left:6px;
+  bottom: 80px;
+  width: 64px;
+  height: 64px;
+  z-index: 1000;
+  background-image: url(previous.png);
+  background-color: transparent;
+  border: none;
+}
+
+.PageNum  {
+  position: absolute;;
+  right:300px;
+  bottom: 90px;
+  width: 32px;
+  height: 32px;
+  z-index: 1000;
+  background-image: url(1.png);
+  background-color: transparent;
+  border: none;
+}
+
+.next {
+  position: absolute;;
+  right:6px;
+  bottom: 80px;
+  width: 64px;
+  height: 64px;
+  z-index: 1000;
+  background-image: url(next.png);
+  background-color: transparent;
+  border: none;
+}
+
+.return {
+  position: absolute;;
+  right:6px;
+  bottom: 80px;
+  width: 64px;
+  height: 64px;
+  z-index: 1000;
+  background-image: url(return.png);
+  background-color: transparent;
+  border: none;
+}
+
+.legend {
+  position: absolute;
+  left:15px;
+  width:auto;
+  z-index: 2000;
+}
+.my-legend {
+  position: absolute;
+  top:90px;
+  left:20px;
+  background-color: #ffffff;
+  border-width: thick;
+  border-color:#f39c12;
+  border-radius: 5px;
+}
+.my-legend .legend-title {
+    width: auto;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+}
+.my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+.my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+}
+.my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 2px solid #ffffff;
+}
