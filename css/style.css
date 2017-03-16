@@ -97,6 +97,19 @@ h3.Narratives {
   font-color: blue;
 }
 
+.showChart {
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  background-color: #ffffff;
+  border-width: thick;
+  border-color:#95a5a6;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-color: blue;
+}
+
 .ButtonClassify {
   position: absolute;
   top: 45px;

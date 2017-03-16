@@ -31,42 +31,6 @@ var MarkerLayerM;
 var MarkerLayerL;
 var MarkerLayerE;
 
-//chart part
-var data = {
-  labels: ['2010', '2011', '2012', '2013', '2014', '2015','2016'],
-  series: [
-    [528, 738, 663, 786, 772, 723, 774]
-  ]
-};
-var options = {
-  // Don't draw the line chart points
-  showPoint: false,
-  // Disable line smoothing
-  lineSmooth: false,
-  // X-Axis specific configuration
-  axisX: {
-    // We can disable the grid for this axis
-    showGrid: false,
-    // and also don't show the label
-    showLabel: false
-  },
-  // Y-Axis specific configuration
-  axisY: {
-    // Lets offset the chart a bit from the labels
-    offset: 60,
-    // The label interpolation function enables you to modify the values
-    // used for the labels on each axis. Here we are converting the
-    // values into million pound.
-    labelInterpolationFnc: function(value) {
-      return '$' + value + 'm';
-    }
-  }
-};
-// Create a new line chart object where as first parameter we pass in a selector
-// that is resolving to our chart container element. The Second parameter
-// is the actual data object.
-new Chartist.Line('.ct-chart', data);
-
 // We set this to HTTP to prevent 'CORS' issues
 $(document).ready(function() {
   // $("#text-input1").val("http://raw.githubusercontent.com/CPLN692-MUSA611/datasets/master/json/philadelphia-crime-snippet.json");
@@ -125,6 +89,35 @@ $(document).ready(function() {
       map.fitBounds(LatLngBounds);
     });
   };
+
+  $('#showChart').click(function(){
+    var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+          columns: [
+            ['FoodInspection', 528,738,663,786,772,723,774],
+          ],
+          types: {
+        FoodInspection: 'bar' // ADD
+          }
+        },
+        axis: {
+          y: {
+            label: { // ADD
+              text: 'Inspection Numbers',
+              position: 'outer-middle'
+            }
+          },
+          x: {
+            show: true,
+            label: { // ADD
+              text: 'From 2010 to 2016',
+              position: 'outer-middle'
+            }
+          }
+        }
+    });
+  });
 
   $('#ShowInfo').click(function(){
     downloadCrimeData.done(function(data) {

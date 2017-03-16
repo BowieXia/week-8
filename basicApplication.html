@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/leaflet.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/0.10.1/chartist.min.css">
+    <link href="css/c3.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="L.Control.MousePosition.css" />
     <link rel="stylesheet" href="leaflet-areaselect.css" />
     <script src="js/jquery-2.2.0.js"></script>
-    <script src="http://cdn.jsdelivr.net/chartist.js/0.10.1/chartist.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/c3.min.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/basicApplication.js"></script>
@@ -43,7 +44,9 @@
               <option value="3">Low Risk</option>
           </select>​
         </div>
-        <div class="ct-chart ct-perfect-fourth"></div>
+        <div id="chart" class="chart">
+          <button id="showChart" class="showChart">ShowChart</button>
+        </div>
         <div id = "SideBar_Info" class = "SideBar_Info" style="display: none"></div>
         <button id="MapData" class="ButtonMap">Mapping All the Restaurants!</button>
         <button id="ButtonClassify" class="ButtonClassify" style="display: none">Classify the Spots</button>
